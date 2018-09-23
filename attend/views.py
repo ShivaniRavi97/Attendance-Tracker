@@ -37,6 +37,7 @@ def signup(request):
 
 def subs(request):
 	if request.method == "POST":
+		max_length=request.POST.get('max_length=20')
 		sub1 = request.POST.get('sub1')
 		sub2 = request.POST.get('sub2')
 		sub3 = request.POST.get('sub3')

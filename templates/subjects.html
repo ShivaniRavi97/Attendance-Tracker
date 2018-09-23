@@ -1,31 +1,63 @@
-<h1>Enter subject details</h1>
-<form action="/cal/" method="POST">
-    {% csrf_token %}
-    Enter Subject 1: 
-    <input type="text" name="sub1" placeholder="Subject 1"></input>
-    Total classes
-    <input type="text" name="tot1" placeholder="total classes"></input><br><br>
-    Enter Subject 2: 
-    <input type="text" name="sub2" placeholder="Subject 2"></input>
-    Total classes
-    <input type="text" name="tot2" placeholder="total classes"></input><br><br>
-    Enter Subject 3: 
-    <input type="text" name="sub3" placeholder="Subject 3"></input>
-    Total classes
-    <input type="text" name="tot3" placeholder="total classes"></input><br><br>
-    Enter Subject 4: 
-    <input type="text" name="sub4" placeholder="Subject 4"></input>
-    Total classes
-    <input type="text" name="tot4" placeholder="total classes"></input><br><br>
-    Enter Subject 5: 
-    <input type="text" name="sub5" placeholder="Subject 5"></input>
-    Total classes
-    <input type="text" name="tot5" placeholder="total classes"></input><br><br>
-    Enter Subject 6: 
-    <input type="text" name="sub6" placeholder="Subject 6"></input>
-    Total classes
-    <input type="text" name="tot6" placeholder="total classes"></input><br><br>
-    Attendance criteria
-    <input type="text" name="att" placeholder="attendance criteria"></input><br><br>
-    <input type="submit" value="Done"></input>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>StudyPlanner</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+		<link rel='shortcut icon' type='image/x-icon' href="{% static "images/favicon.png" %}" >
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118291853-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-118291853-1');
+		</script>
+	</head>
+	<body class="background">
+		
+		<div class="container" style="text-align:center; margin-top: 50px;">
+			<div style="text-align: center;">
+				<img src="{% static "images/logo5.jpg" %}" style="width:100px;height:100px; border-radius:50%; " alt="Daily Study Hours">
+			</div>
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 container">
+					<h1>Daily Study Hours</h1>
+					<h3 style="color:#f1f2f6">Fill in the details and figure out <br> how many hours you need to study everyday.</h3><br>
+					<form action="/" method="POST" id="myForm">
+						{% csrf_token %}
+						<div class="form-group">
+							<label>I have <input type="text" name="days" id="days" value="{{ days }}" placeholder="X number of"> days left until the exam.</label>
+							<br>
+							<label>I have <input id="msgs" type="text" name="subjects" value="{{ subjects }}" placeholder="Y number of"> no. of subjects to study.</label>
+							<div id="data-table"></div>
+							<div id="submit-btn">
+							</div>
+						</div>
+					</form>
+					{% if minutes or hours %}
+						<p style="font-size:24px;color:#f5f6fa">You should study <b>{{ hours }} hours {{ minutes }} minutes</b> everyday if you start today. <br> Here's how many hours you need to study for everyday you waste <i class="em em-point_down"></i></p>
+					{% endif %}
+					{% if chart %}
+						<div id="chart" style="display: block;">
+							
+							<embed type="image/svg+xml" src="{{chart|safe}}"/>
+						</div>
+					{% endif %}
+				</div>
+				<div class='col-md-2' style="margin-bottom: 50px;"></div>
+			</div>
+			
+			<script src="{% static 'js/subjects.js' %}"></script>
+			<script src="{% static 'js/jquery.flot.js' %}"></script>
+			
+		</body>
+	</html>

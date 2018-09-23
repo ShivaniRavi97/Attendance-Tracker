@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Subname(models.Model):
+	max_length=models.IntegerField()
 	sub1=models.CharField(max_length=200)
 	sub2=models.CharField(max_length=200)
 	sub3=models.CharField(max_length=200)
