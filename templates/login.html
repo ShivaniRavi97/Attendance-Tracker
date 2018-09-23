@@ -1,0 +1,9 @@
+
+<form action="/subs/" method="POST">
+    {% csrf_token %}
+    NAME: 
+    <input type="text" name="username" placeholder="username"></input>
+    PASSWORD:
+    <input type="password" name="password" placeholder="password"></input>
+    <input type="submit" value="Login"></input>
+</form>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>date picker: HTML5</title>
+<link href="myStyle.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body> 
+<form  action="/cal/" method="POST">
+	{% csrf_token %}
+	<label for="dt">Date: </label>
+	 <input name="dt" type="date"/><br><br>
+	  <select>
+		  <option value="Absent">Absent</option>
+		  <option value="Present" selected="Present">Present</option>
+		  <option value="Holiday">Holiday</option>
+	   </select> 
+	 <input type="checkbox" name="Absent" value="sub1">{{sub1}}
+     <input type="checkbox" name="Present" value="Present"checked>Present
+     <input type="checkbox" name="Holiday" value="Holiday" >Holiday
+
+     <br><br>
+	 <input type="submit"/>
+</form>
+ 
+</body>
+</html>
