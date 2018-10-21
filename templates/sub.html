@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sub</title>
+</head>
+<body>
+     <form action="" method="POST">
+     {%csrf_token %}
+     NO. of subjects<input type="text" name="num">
+     {% if num %}
+     <br>{% for i in num %}
+     Subjects<input type="text" name="sub{{i}}">
+     {%endfor%}
+     {% endif %}
+     <button type="submit" form="form1" value="Submit">Submit</button>
+</form>
+</body>
+</html>

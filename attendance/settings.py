@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
-
+import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,6 +26,7 @@ SECRET_KEY = 'p^ahp(%5rt9io7j664^otna&rd1y0e4z(s%=1&-2+=t8a2%tos'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_URL = ''
 
 
 # Application definition
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'attendance.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['templates','static'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,5 +126,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
 ]
+django_heroku.settings(locals())

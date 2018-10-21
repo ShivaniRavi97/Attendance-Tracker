@@ -2,35 +2,63 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class Subname(models.Model):
-	max_length=models.IntegerField()
-	sub1=models.CharField(max_length=200)
-	sub2=models.CharField(max_length=200)
-	sub3=models.CharField(max_length=200)
-	sub4=models.CharField(max_length=200)
-	sub5=models.CharField(max_length=200)
-	sub6=models.CharField(max_length=200)
-	tot1=models.IntegerField()
-	tot2=models.IntegerField()
-	tot3=models.IntegerField()
-	tot4=models.IntegerField()
-	tot5=models.IntegerField()
-	tot6=models.IntegerField()
-	att=models.IntegerField()
-	# attendance_criteria=models.IntegerField()
-# 	subs = ArrayField(models.CharField(max_length=10, blank=True),size=8)
-# 	no_of_classes = ArrayField(models.IntegerField( blank=True),size=8)
-	
+class Subject(models.Model):
+	name = models.CharField(max_length=100)
+	total = models.IntegerField(default=0)
+	absent = models.IntegerField(default=0)
+	att_perc= models.FloatField(default=100.0)
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-	def __str__(self):
-		return f"{self.sub1}| {self.sub2} | | {self.sub3}| {self.sub4}| {self.sub5}| {self.sub6}"
-		# always return short things
+class Sgpa(models.Model):
+   credit1 = models.IntegerField(default=0)
+   credit2 = models.IntegerField(default=0)
+   credit3 = models.IntegerField(default=0)
+   credit4 = models.IntegerField(default=0)
+   credit5 = models.IntegerField(default=0)
+   credit6 = models.IntegerField(default=0)
+   credit7 = models.IntegerField(default=0)
+   credit8 = models.IntegerField(default=0)
+   grade_point1 = models.IntegerField(default=0)
+   grade_point2 = models.IntegerField(default=0)
+   grade_point3 = models.IntegerField(default=0)
+   grade_point4 = models.IntegerField(default=0)
+   grade_point5 = models.IntegerField(default=0)
+   grade_point6 = models.IntegerField(default=0)
+   grade_point7 = models.IntegerField(default=0)
+   grade_point8 = models.IntegerField(default=0)
+   credit_pt1 = models.IntegerField(default=0) 
+   credit_pt2 = models.IntegerField(default=0)  
+   credit_pt3 = models.IntegerField(default=0)  
+   credit_pt4 = models.IntegerField(default=0)  
+   credit_pt5 = models.IntegerField(default=0)  
+   credit_pt6 = models.IntegerField(default=0)
+   credit_pt7 = models.IntegerField(default=0)
+   credit_pt8 = models.IntegerField(default=0)
+   tot_cp = models.IntegerField(default=0)
+   tot_c = models.IntegerField(default=0) 
+   tot_sgpa = models.IntegerField(default=0)
+   percent = models.IntegerField(default=0) 
 
-# # class Comment(models.Model):
-# # 	post=models.ForeignKey(BlogPost,on_delete=models.CASCADE)
-# # 	text=models.TextField()
-# # 	timestamp=models.DateTimeField(auto_now_add=True)
-# # 	user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
 
-# # 	def __str__(self):
-# # 		return f"{self.post.title} | {self.text[:30]}"
+class Cgpa(models.Model):
+   c1 = models.IntegerField(default=0)
+   c2 = models.IntegerField(default=0)
+   c3 = models.IntegerField(default=0)
+   c4 = models.IntegerField(default=0)
+   c5 = models.IntegerField(default=0)
+   c6 = models.IntegerField(default=0) 
+   c7 = models.IntegerField(default=0)
+   c8 = models.IntegerField(default=0)
+   sg1 = models.IntegerField(default=0)
+   sg2 = models.IntegerField(default=0)
+   sg3 = models.IntegerField(default=0)
+   sg4 = models.IntegerField(default=0)
+   sg5 = models.IntegerField(default=0)
+   sg6 = models.IntegerField(default=0) 
+   sg7 = models.IntegerField(default=0)
+   sg8 = models.IntegerField(default=0)
+   total_cg = models.IntegerField(default=0)
+   total_c = models.IntegerField(default=0)
+   total = models.IntegerField(default=0)
+   percentage = models.IntegerField(default=0)  
+    

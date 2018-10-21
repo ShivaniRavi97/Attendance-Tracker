@@ -1,0 +1,100 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" class="demo-2 no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Subject List</title>
+		<meta name="description" content="Hover Effects with animated SVG Shapes using Snap.svg" />
+		<meta name="keywords" content="animated svg, hover effect, grid, svg shape html, " />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/demo.css" %}">  
+		<link rel="stylesheet" type="text/css" href="{% static "css/component1.css" %}">
+		<script src="{% static "js/snap.svg-min.js" %}"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<h1>TASKS<span>Manage your tasks</span></h1>
+			</header>
+			<section id="grid" class="grid clearfix">
+				<a href="/attend/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="{% static "images/att.png" %}" style="height:500px;" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>ATTENDANCE TRACKER</h2>
+							<p>Track your attendance and avoid shortage.</p>
+							<button >Track Now</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="/sgpa/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="{% static "images/s.png" %}" style="height:500px" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>SGPA CALCULATOR</h2>
+							<p>It  is  a  measure  of 
+academic  performance  of  student/s  in  a  semester.  It is  the ratio  of  total  credit  points  secured  by  a  student  in  various courses registered in a semester and the total course credits 2 taken during that semester. It shall be expressed up to two decimal places. </p>
+      <p>Here is a calculator to calculate your SGPA and also find your percentage.</p>
+
+							<button>Calculate</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="/cgpa/" data-path-hover="m 0,0 0,47.7775 c 24.580441,3.12569 55.897012,-8.199417 90,-8.199417 34.10299,0 65.41956,11.325107 90,8.199417 L 180,0 z">
+					<figure>
+						<img src="{% static "images/s2.png" %}" style="height:500px" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="m 0,0 0,171.14385 c 24.580441,15.47138 55.897012,24.75772 90,24.75772 34.10299,0 65.41956,-9.28634 90,-24.75772 L 180,0 0,0 z"/></svg>
+						<figcaption>
+							<h2>CGPA CALCULATOR</h2>
+							<p>It is a measure of 
+overall  cumulativeperformance  of  a  student  over  all semesters. The CGPA is the ratio of total credit po
+ints earned by a student in various courses in all semesters and the sum 
+of  the  total  credits  of  all  courses  in  all the  semesters.  It  is expressed up to two decimal places. </p>
+      <p>Here is a calculator to calculate your CGPA and also find your percentage.</p>
+							<button>Calculate</button>
+						</figcaption>
+					</figure>
+				</a>
+			
+				
+			</section>
+		</div><!-- /container -->
+		<script>
+			(function() {
+	
+				function init() {
+					var speed = 330,
+						easing = mina.backout;
+
+					[].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+						var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+							pathConfig = {
+								from : path.attr( 'd' ),
+								to : el.getAttribute( 'data-path-hover' )
+							};
+
+						el.addEventListener( 'mouseenter', function() {
+							path.animate( { 'path' : pathConfig.to }, speed, easing );
+						} );
+
+						el.addEventListener( 'mouseleave', function() {
+							path.animate( { 'path' : pathConfig.from }, speed, easing );
+						} );
+					} );
+				}
+
+				init();
+
+			})();
+		</script>
+	</body>
+</html>

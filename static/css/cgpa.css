@@ -1,0 +1,48 @@
+
+body{
+    /* The image used */
+   /* background-image:M1.jpg;
+
+     Full height 
+    height: 100%;*/
+    background-image:url("{% static "images/1.jpg" %}");
+    background-size: 500px 500px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arbutus Slab', serif;
+     animation: back_animate 25s infinite linear;
+
+}
+@keyframes back_animate 
+{
+ 0%{background-color:#6F1E51;}
+ 10%{background-color:#833471;}
+ 20%{background-color:#B53471;}
+ 30%{background-color:#FDA7DF;}
+ 40%{background-color:#D980FA;}
+ 50%{background-color:#9980FA;}
+ 60%{background-color:#9980FA;}
+ 70%{background-color:#5758BB;} 
+ 80% {background-color:#12CBC4;}
+ 90%{background-color:#1289A7;}
+ 100%{background-color:#1B1464;}
+}
+
+h1{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+.container{
+	padding-top: 100px;
+	padding-left: 100px;
+  size: 50px 50px;
+  text-align: center;
+
+}

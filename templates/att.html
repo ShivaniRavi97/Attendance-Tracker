@@ -1,0 +1,60 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Caption Hover Effects - Demo 5</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/component.css"%}" />
+		<script src="{% static "js/modernizr.custom.js" %}"></script>
+	</head>
+	<body>
+		<div class="content-header content-header-media" style="background-color:#2f3542; height: 150px;">
+            <div class="header-section">
+                   <br> <h1>ATTENDANCE TRACKER</h1>
+                   <h2>Manage your classes here!</h2>
+    </div>
+            </div>
+			<ul class="grid cs-style-5">
+				<li>
+					<figure>
+						<img src="{% static "images/a.png" %}" style="height:400px;width:350px">
+						<figcaption>
+							 <h3>Add Subject</h3>
+							<p>Add you subject and number of classes per subject.</p>
+							<a href="/add/">ADD</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="{% static "images/up1.png" %}" style="height:400px;width:350px" >
+						<figcaption>
+							<h3>Update Attendance</h3>
+							<p>Update the number of classes absent</p>
+							<a href="/update/">UPDATE</a>
+						</figcaption>
+					</figure>
+				</li>
+				<li>
+					<figure>
+						<img src="{% static "images/ch.png" %}"  style="height:400px;width:350px">
+						<figcaption>
+							<h3>Check ATTENDANCE</h3>
+							<p>Have a look at your present attendance percentage!</p>
+							<a href="http://dribbble.com/shots/1115632-Camera">Take a look</a>
+						</figcaption>
+					</figure>
+				</li>
+	
+			</ul>
+		</div><!-- /container -->
+		<script src="{% static "js/toucheffects.js" %}"></script>
+	</body>
+</html>

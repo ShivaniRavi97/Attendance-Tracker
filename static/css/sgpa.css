@@ -1,0 +1,47 @@
+
+body{
+    /* The image used */
+   /* background-image:M1.jpg;
+
+     Full height 
+    height: 100%;*/
+  
+     background-image: url("../images/2.jpg");
+    background-size: cover;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Arbutus Slab', serif;
+     animation: back_animate 25s infinite linear;
+}
+@keyframes back_animate 
+{
+ 0%{background-color:#079992;}
+ 10%{background-color:#38ada9;}
+ 20%{background-color:#82ccdd;}
+ 30%{background-color:#60a3bc;}
+ 40%{background-color:#3c6382;}
+ 50%{background-color:#0a3d62;}
+ 60%{background-color:#6a89cc;}
+ 70%{background-color:#1e3799;} 
+ 80% {background-color:#0c2461;}
+ 90%{background-color:#1289A7;}
+ 100%{background-color:#1B1464;}
+}
+h1{
+	text-align: center;
+}
+
+p{
+	text-align: center;
+}
+
+.container{
+	padding-top: 100px;
+	padding-left: 100px;
+  size: 50px 50px;
+  text-align: center;
+
+}

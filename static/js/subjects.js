@@ -9,12 +9,10 @@ $(document).ready(function() {
                 $("#data-table").text('');
 
                 for (var i = 1; i <= num; i++) {
-                    $("#data-table").append("<label>I need</label>\
-                                    <input placeholder='Z number of' type='text' name='subhour" + i + "'>\
-                                    <label> hours to study</label>\
+                    $("#data-table").append("<label> Subject</label>\
                                     <input placeholder='Subject " + i + "' type='text' name='sub" + i + "'>.<br><br>");
                 }
-                $("#submit-btn").html("<button type='submit' class='btn btn-lg btn-warning'>Calculate</button>");
+                $("#submit-btn").html("<button type='submit' class='btn btn-lg btn-warning'>Done</button>");
             }
         };
     });

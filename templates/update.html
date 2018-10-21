@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Update Attendance</title>
+	</head>
+	<body>
+		
+		<form action="/update/" method="POST">
+			{% csrf_token %}
+			<select name="subject">
+				{%for sub in subs %}
+				<option value="{{sub.id}}">{{sub.name}}</option>
+				{% endfor %}
+				<input type="text" name="absent" placeholder="No. of Classes absent">
+				<input type="text" name="{{att_perc}}" placeholder="Present Percentage" value="{{att_perc}}">
+			</select>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>

@@ -22,24 +22,19 @@
 		</script>
 	</head>
 	<body class="background">
-		
-		<div class="container" style="text-align:center; margin-top: 50px;">
-			<div style="text-align: center;">
-				<img src="{% static "images/logo5.jpg" %}" style="width:100px;height:100px; border-radius:50%; " alt="Daily Study Hours">
-			</div>
 			<div class="row">
 				<div class="col-md-2"></div>
 				<div class="col-md-8 container">
-					<h1>Daily Study Hours</h1>
-					<h3 style="color:#f1f2f6">Fill in the details and figure out <br> how many hours you need to study everyday.</h3><br>
+					<h1>Subjects</h1>
+					<h3 style="color:black">Enter the number of subjects</h3><br>
 					<form action="/" method="POST" id="myForm">
 						{% csrf_token %}
 						<div class="form-group">
-							<label>I have <input type="text" name="days" id="days" value="{{ days }}" placeholder="X number of"> days left until the exam.</label>
+							
 							<br>
 							<label>I have <input id="msgs" type="text" name="subjects" value="{{ subjects }}" placeholder="Y number of"> no. of subjects to study.</label>
 							<div id="data-table"></div>
-							<div id="submit-btn">
+							<div id="submit-btn" value="submit" name="submit">
 							</div>
 						</div>
 					</form>
