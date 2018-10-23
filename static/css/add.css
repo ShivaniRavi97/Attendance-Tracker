@@ -2,6 +2,7 @@ body {
     text-align: center;
     background-image: url("../images/add.jpg");
     background-size: cover;
+     background-attachment: fixed;
 
 }
 
@@ -11,4 +12,8 @@ h1{
 }
 h4{
     text-align: left;
+}
+.table{
+	color: white;
+	width:300px;
 }
