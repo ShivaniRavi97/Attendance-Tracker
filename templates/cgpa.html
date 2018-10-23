@@ -1,89 +1,84 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-	<title>cgpa</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="{% static "css/cgpa.css" %}">
-</head>
-<body class="gradient-background-header transparent-header front-page " background="1.jpg" id="page-top" >
-	 <div class="container">
- 	    <div class="card">
-  		     <div class="card-body">
-	<h1>CGPA CALCULATOR</h1>
-	<p>Fill zeros for the empty boxes(for which u have no value)</p>
-
-	<form  action="/cgpa/" method="POST">
-	{% csrf_token %}
-	<br>
-	 <label for="sub1">Sem 1 :&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <label for="c1">Credit</label>
-	 <input name="c1" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg1">SGPA</label>
-	 <input name="sg1" type="text"/><br><br>
-
-	 <label for="sub2">Sem 2 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="c2">Credit</label>
-	 <input name="c2" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg2">SGPA</label>
-	 <input name="sg2" type="text"/><br><br>
-
-	<label for="sub3">Sem 3 : &nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <label for="c3">Credit</label>
-	 <input name="c3" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg3">SGPA</label>
-	 <input name="sg3" type="text"/><br><br>
-
-	<label for="sub4">Sem 4 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="c4">Credit</label>
-	 <input name="c4" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg4">SGPA</label>
-	 <input name="sg4" type="text"/><br><br>
-
-	 <label for="sub5">Sem 5 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="c5">Credit</label>
-	 <input name="c5" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg5">SGPA</label>
-	 <input name="sg5" type="text"/><br><br>
-
-	 <label for="sub6">Sem 6 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="c6">Credit</label>
-	 <input name="c6" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg6">SGPA</label>
-	 <input name="sg6" type="text"/><br><br>
-
-	 <label for="sub7">Sem 7 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="c7">Credit</label>
-	 <input name="c7" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg7">SGPA</label>
-	 <input name="sg7" type="text"/><br><br>
-
-	 <label for="sub8">Sem 8 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="c8">Credit</label>
-	 <input name="c8" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="sg8">SGPA</label>
-	 <input name="sg8" type="text"/><br><br>
-	 <br>
-	  <label for="tot_sgpa">CGPA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <input name="tot_sgpa" type="text" value="{{total}}"/><br>
-
-	 <label for="percentage">Percentage&nbsp;</label>
-	 <input name="percentage" type="text" value="{{percentage}}"/>
-     <br><br>
-	 <input type="submit" name="Submit">
-
-<button type="submit" name="Submit" value="Submit">Calculate
-
-</form>
-</div>
-</div>
-</div>
-
-
-</body>
+	<head>
+		<title>cgpa</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static "css/cgpa.css" %}">
+	</head>
+	<body class="gradient-background-header transparent-header front-page " background="1.jpg" id="page-top" >
+		<div class="container">
+			<div class='row'>
+				<div class='col-md-2'>
+				</div>
+				<div class="col-md-8">
+					
+					<div class="card">
+						<div class="card-body">
+							<h1>CGPA CALCULATOR</h1>
+							<p>Fill zeros for the empty boxes(for which u have no value)</p>
+							<form  action="/cgpa/" method="POST">
+								{% csrf_token %}
+								<br>
+								<label for="sub1">Sem 1 :&nbsp;&nbsp;&nbsp;&nbsp;</label>
+								<label for="c1">Credit</label>
+								<input name="c1" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg1">SGPA</label>
+								<input name="sg1" type="text"/><br><br>
+								<label for="sub2">Sem 2 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+								<label for="c2">Credit</label>
+								<input name="c2" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg2">SGPA</label>
+								<input name="sg2" type="text"/><br><br>
+								<label for="sub3">Sem 3 : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+								<label for="c3">Credit</label>
+								<input name="c3" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg3">SGPA</label>
+								<input name="sg3" type="text"/><br><br>
+								<label for="sub4">Sem 4 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+								<label for="c4">Credit</label>
+								<input name="c4" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg4">SGPA</label>
+								<input name="sg4" type="text"/><br><br>
+								<label for="sub5">Sem 5 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+								<label for="c5">Credit</label>
+								<input name="c5" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg5">SGPA</label>
+								<input name="sg5" type="text"/><br><br>
+								<label for="sub6">Sem 6 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+								<label for="c6">Credit</label>
+								<input name="c6" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg6">SGPA</label>
+								<input name="sg6" type="text"/><br><br>
+								<label for="sub7">Sem 7 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+								<label for="c7">Credit</label>
+								<input name="c7" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg7">SGPA</label>
+								<input name="sg7" type="text"/><br><br>
+								<label for="sub8">Sem 8 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+								<label for="c8">Credit</label>
+								<input name="c8" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="sg8">SGPA</label>
+								<input name="sg8" type="text"/><br><br>
+								<br>
+								<label for="tot_sgpa">CGPA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+								<input name="tot_sgpa" type="text" value="{{total}}"/><br>
+								<label for="percentage">Percentage&nbsp;</label>
+								<input name="percentage" type="text" value="{{percentage}}"/>
+								<br><br>
+								<input type="submit" value="Calculate">
+							</form>
+						</div>
+					</div>
+					<div class="col-md-2">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

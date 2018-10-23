@@ -1,21 +1,56 @@
 {% load static %}
-<!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<title>Update Attendance</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../../../favicon.ico">
+		<title>Update</title>
+		<!-- Bootstrap core CSS -->
+		<link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="signin.css" rel="stylesheet">
 	</head>
-	<body>
-		
+	<body class="text-center">
 		<form action="/update/" method="POST">
 			{% csrf_token %}
+			<h1 class="h3 mb-3 font-weight-normal">Update your attendance</h1>
 			<select name="subject">
 				{%for sub in subs %}
-				<option value="{{sub.id}}">{{sub.name}}</option>
-				{% endfor %}
-				<input type="text" name="absent" placeholder="No. of Classes absent">
-				<input type="text" name="{{att_perc}}" placeholder="Present Percentage" value="{{att_perc}}">
-			</select>
-			<button type="submit">Submit</button>
-		</form>
-	</body>
+				<option value="{{sub.id}}">{{sub.name}}<br></option>
+			{% endfor %}
+		</select>
+		<br>
+		<label>Absent classes<br></label><br>
+		<input type="text" name="absent" placeholder="No. of Classes absent"><br>
+		<label  class="sr-only">Present Percentage<br></label>
+		<input type="text" name="{{att_perc}}" placeholder="Present Percentage" value="{{att_perc}}"><br>
+		
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+	
+	
+</form>
+</body>
 </html>
+<!--<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Attendance</title>
+</head>
+<body>
+	
+	<form action="/update/" method="POST">
+			{% csrf_token %}
+			<select name="subject">
+					{%for sub in subs %}
+					<option value="{{sub.id}}">{{sub.name}}</option>
+			{% endfor %}
+			<input type="text" name="absent" placeholder="No. of Classes absent">
+			<input type="text" name="{{att_perc}}" placeholder="Present Percentage" value="{{att_perc}}">
+	</select>
+	<button type="submit">Submit</button>
+</form>
+</body>
+</html>-->

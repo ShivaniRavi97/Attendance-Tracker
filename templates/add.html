@@ -36,6 +36,7 @@
                 <input type="text" name="total" placeholder="Total No. of Classes"><br><br>
                 <button type="submit">Submit</button>
               </form>
+                        
             </div>
             
           </div>
@@ -44,13 +45,30 @@
       </div>
       
     </div>
-    {% if subs %}
-      <div>
-        {% for sub in subs %}
-          <p>{{sub.name}} {{sub.att_perc}}</p>
-        {% endfor %}
-      </div>
-    {% endif %}
+    <br><br>
+      {% if subs %}
+    <div class="container">
+     
+  <table class="table" border=1   align=right>
+    <thead>
+      <tr>
+        <th><strong>Subjects</strong></th>
+        <th><strong>Attendance Percentage</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+    
+     {%for sub in subs %}
+      <tr value="{{sub.id}}">
+        <td><strong>{{sub.name}}</strong></td>
+        <td><strong>{{sub.att_perc}}</strong></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+  
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script  src="{% static "js/add.js" %}"></script>
   </body>

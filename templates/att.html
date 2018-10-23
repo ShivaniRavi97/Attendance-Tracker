@@ -24,17 +24,18 @@
 			<ul class="grid cs-style-5">
 				<li>
 					<figure>
-						<img src="{% static "images/a.png" %}" style="height:400px;width:350px">
+						<img src="{% static "images/a.png" %}" style="height:250px;width:200px">
 						<figcaption>
 							 <h3>Add Subject</h3>
 							<p>Add you subject and number of classes per subject.</p>
 							<a href="/add/">ADD</a>
+
 						</figcaption>
 					</figure>
 				</li>
 				<li>
 					<figure>
-						<img src="{% static "images/up1.png" %}" style="height:400px;width:350px" >
+						<img src="{% static "images/up1.png" %}" style="height:250px;width:200px" >
 						<figcaption>
 							<h3>Update Attendance</h3>
 							<p>Update the number of classes absent</p>
@@ -44,10 +45,13 @@
 				</li>
 				<li>
 					<figure>
-						<img src="{% static "images/ch.png" %}"  style="height:400px;width:350px">
+						<img src="{% static "images/ch.png" %}"  style="height:250px;width:200px">
 						<figcaption>
 							<h3>Check ATTENDANCE</h3>
 							<p>Have a look at your present attendance percentage!</p>
+							<form method="get" action="/display/">
+                                   <button type="submit">NEXT</button>
+                            </form>
 							<a href="/display/">Take a look</a>
 						</figcaption>
 					</figure>

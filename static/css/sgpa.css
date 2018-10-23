@@ -6,8 +6,7 @@ body{
      Full height 
     height: 100%;*/
   
-     background-image: url("../images/2.jpg");
-    background-size: cover;
+
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -18,11 +17,11 @@ body{
 }
 @keyframes back_animate 
 {
- 0%{background-color:#079992;}
- 10%{background-color:#38ada9;}
- 20%{background-color:#82ccdd;}
- 30%{background-color:#60a3bc;}
- 40%{background-color:#3c6382;}
+ 0%{background-color:#e15f41;}
+ 10%{background-color:#a5b1c2;}
+ 20%{background-color:#e15f41;}
+ 30%{background-color:#a5b1c2;}
+ 40%{background-color:#e15f41;}
  50%{background-color:#0a3d62;}
  60%{background-color:#6a89cc;}
  70%{background-color:#1e3799;} 

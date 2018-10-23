@@ -142,6 +142,7 @@ a:active {
 .codrops-demos a.current-demo:hover {
 	border-color: #2c3f52;
 	color: #2c3f52;
+	
 }
 
 @media screen and (max-width: 25em) {
