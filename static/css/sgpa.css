@@ -9,28 +9,14 @@ body{
 
 
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #4FE89F;
     font-family: 'Arbutus Slab', serif;
-     animation: back_animate 25s infinite linear;
+     
 }
-@keyframes back_animate 
-{
- 0%{background-color:#e15f41;}
- 10%{background-color:#a5b1c2;}
- 20%{background-color:#e15f41;}
- 30%{background-color:#a5b1c2;}
- 40%{background-color:#e15f41;}
- 50%{background-color:#0a3d62;}
- 60%{background-color:#6a89cc;}
- 70%{background-color:#1e3799;} 
- 80% {background-color:#0c2461;}
- 90%{background-color:#1289A7;}
- 100%{background-color:#1B1464;}
-}
+
 h1{
 	text-align: center;
+   font-size: 45px;
 }
 
 p{
@@ -39,8 +25,25 @@ p{
 
 .container{
 	padding-top: 100px;
-	padding-left: 100px;
-  size: 50px 50px;
+	padding-left: 50px;
+  padding-right: 50px;
+  margin:0 150px 10px 100px;
   text-align: center;
+  font-size: 17px;
+
+
+}
+button:hover {
+  color: #7795f8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+
+.hello{
+
+  padding-top: 10px;
+  padding-left: 10px;
+
+
 
 }

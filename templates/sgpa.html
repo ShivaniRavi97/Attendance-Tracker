@@ -1,101 +1,96 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-	<title>sgpa</title>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="{% static "css/sgpa.css" %}">
-</head>
-<body  class="gradient-background-header transparent-header front-page "  id="page-top" >
-	 <div class="container">
- 	    <div class="card">
-  		     <div class="card-body">
-	<h1>SGPA CALCULATOR</h1>
-	<p>Fill zeros for the empty boxes(for which u have no value)</p>
+	<head>
+		<title>sgpa</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static "css/sgpa.css" %}">
+	</head>
+	<body  class="gradient-background-header transparent-header front-page "  id="page-top" >
+		<div class="container">
+			
+			<div class="card">
+				<div class="card-body">
+					<h1>SGPA CALCULATOR</h1>
+					<p>Fill zeros for the empty boxes(for which u have no value)</p>
+					<div class="hello">
+					<form  action="/sgpa/" method="POST">
+						{% csrf_token %}
+						<br>
+						<label for="sub1">Subject 1 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<label for="credit1">Credit</label>
+						<input name="credit1" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point1">Grade Point</label>
+						<input name="grade_point1" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt1">Credit Point</label>
+						<input name="credit_pt1" type="text" value="{{credit_pt1}}" /><br><br>
+						<label for="sub2">Subject 2 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<label for="credit2">Credit</label>
+						<input name="credit2" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point2">Grade Point</label>
+						<input name="grade_point2" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt2">Credit Point</label>
+						<input name="credit_pt2" type="text" value="{{credit_pt2}}"/><br><br>
+						<label for="sub3">Subject 3 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<label for="credit3">Credit</label>
+						<input name="credit3" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point3">Grade Point</label>
+						<input name="grade_point3" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt3">Credit Point</label>
+						<input name="credit_pt3" type="text" value="{{credit_pt3}}"/><br><br>
+						<label for="sub4">Subject 4 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<label for="credit4">Credit</label>
+						<input name="credit4" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point4">Grade Point</label>
+						<input name="grade_point4" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt4">Credit Point</label>
+						<input name="credit_pt4" type="text" value="{{credit_pt4}}"/><br><br>
+						<label for="sub5">Subject 5 :&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<label for="credit5">Credit</label>
+						<input name="credit5" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point5">Grade Point</label>
+						<input name="grade_point5" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt5">Credit Point</label>
+						<input name="credit_pt5" type="text" value="{{credit_pt5}}"/><br><br>
+						<label for="sub6">Subject 6 : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<label for="credit6">Credit</label>
+						<input name="credit6" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point6">Grade Point</label>
+						<input name="grade_point6" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt6">Credit Point</label>
+						<input name="credit_pt6" type="text" value="{{credit_pt6}}"/><br><br>
+						<label for="sub7">Subject 7 : &nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<label for="credit7">Credit</label>
+						<input name="credit7" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point7">Grade Point</label>
+						<input name="grade_point7" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt7">Credit Point</label>
+						<input name="credit_pt7" type="text" value="{{credit_pt7}}"/><br><br>
+						<label for="sub8">Subject 8 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
+						<label for="credit8">Credit</label>
+						<input name="credit8" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="grade_point8">Grade Point</label>
+						<input name="grade_point8" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label for="credit_pt8">Credit Point</label>
+						<input name="credit_pt8" type="text" value="{{credit_pt8}}"/><br><br><br>
+						<label for="tot_sgpa">SGPA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+						<input name="tot_sgpa" type="text" value="{{tot_sgpa}}"/><br>
+						<label for="percent">Percentage&nbsp;&nbsp;</label>
+						<input name="percent" type="text" value="{{percent}}"/>
+						
+						<br><br>
+						<button type="submit" name="Submit" value="Submit">Calculate
+						</button>
 
-	<form  action="/sgpa/" method="POST">
-	{% csrf_token %}
-	<br>
-	 <label for="sub1">Subject 1 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="credit1">Credit</label>
-	 <input name="credit1" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point1">Grade Point</label>
-	 <input name="grade_point1" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt1">Credit Point</label>
-	 <input name="credit_pt1" type="text" value="{{credit_pt1}}" /><br><br>
-
-	 <label for="sub2">Subject 2 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="credit2">Credit</label>
-	 <input name="credit2" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point2">Grade Point</label>
-	 <input name="grade_point2" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt2">Credit Point</label>
-	 <input name="credit_pt2" type="text" value="{{credit_pt2}}"/><br><br>
-
-	<label for="sub3">Subject 3 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="credit3">Credit</label>
-	 <input name="credit3" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point3">Grade Point</label>
-	 <input name="grade_point3" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt3">Credit Point</label>
-	 <input name="credit_pt3" type="text" value="{{credit_pt3}}"/><br><br>
-
-	<label for="sub4">Subject 4 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="credit4">Credit</label>
-	 <input name="credit4" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point4">Grade Point</label>
-	 <input name="grade_point4" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt4">Credit Point</label>
-	 <input name="credit_pt4" type="text" value="{{credit_pt4}}"/><br><br>
-
-	 <label for="sub5">Subject 5 :&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <label for="credit5">Credit</label>
-	 <input name="credit5" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point5">Grade Point</label>
-	 <input name="grade_point5" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt5">Credit Point</label>
-	 <input name="credit_pt5" type="text" value="{{credit_pt5}}"/><br><br>
-
-	 <label for="sub6">Subject 6 : &nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <label for="credit6">Credit</label>
-	 <input name="credit6" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point6">Grade Point</label>
-	 <input name="grade_point6" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt6">Credit Point</label>
-	 <input name="credit_pt6" type="text" value="{{credit_pt6}}"/><br><br>
-
-	 <label for="sub7">Subject 7 : &nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <label for="credit7">Credit</label>
-	 <input name="credit7" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point7">Grade Point</label>
-	 <input name="grade_point7" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt7">Credit Point</label>
-	 <input name="credit_pt7" type="text" value="{{credit_pt7}}"/><br><br>
-
-	 <label for="sub8">Subject 8 :&nbsp;&nbsp;&nbsp;&nbsp; </label>
-	 <label for="credit8">Credit</label>
-	 <input name="credit8" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="grade_point8">Grade Point</label>
-	 <input name="grade_point8" type="text"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	 <label for="credit_pt8">Credit Point</label>
-	 <input name="credit_pt8" type="text" value="{{credit_pt8}}"/><br><br><br>
-
-	  <label for="tot_sgpa">SGPA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-	 <input name="tot_sgpa" type="text" value="{{tot_sgpa}}"/><br>
-
-	 <label for="percent">Percentage&nbsp;&nbsp;</label>
-	 <input name="percent" type="text" value="{{percent}}"/>
-	
-     <br><br>
-
-	 <button type="submit" name="Submit" value="Submit">Calculate
-</form>
-
-
-</body>
-</html>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+				</body>
+			</html>
