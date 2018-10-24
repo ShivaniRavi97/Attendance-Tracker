@@ -1,10 +1,16 @@
-
+body{
+    background-color: #52be7f;
+    
+}
 
 
 button:hover {
   color: #7795f8;
   transform: translateY(-1px);
   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+h1{
+    text-align: center;
 }
 
 input[type=text], select {

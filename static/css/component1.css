@@ -20,7 +20,7 @@
 	position: relative;
 	overflow: hidden;
 	margin: 5px;
-	background: #333;
+	background: #B21500;
 }
 
 .grid figure img {
@@ -141,16 +141,17 @@
 }
 
 .demo-2 body {
-	background: #e74c3c;
+	background: #3ECF8E;
 }
 
 .demo-2 .grid figcaption h2 {
-	color: #e74c3c;
+	color: #B21500;
 }
 
 .demo-2 .grid figcaption p {
 	-webkit-transition-delay: 0.05s;
 	transition-delay: 0.05s;
+	color: #B21500;
 }
 
 .demo-2 .grid figure button {

@@ -22,10 +22,10 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 body {
 	font-family: 'Lato', Calibri, Arial, sans-serif;
 	color: #b3b9bf;
-	background: #dfe6e9;
+	background: #52be7f;
 }
 h1{
-	color: white;
+	color: #C81600 ;
 	text-align: center;
 }
 h2{
