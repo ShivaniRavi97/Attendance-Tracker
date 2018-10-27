@@ -4,11 +4,17 @@ body {
     background-size: cover;
      background-attachment: fixed;
 
+font-family: 'Vollkorn', serif;
+
+}
+.table{
+  color: #C81600 ;
+
 }
 
 h1{
    color: #C81600 ;
-   font-size: 80px;
+   font-size: 55px;
 }
 h4{
     text-align: left;

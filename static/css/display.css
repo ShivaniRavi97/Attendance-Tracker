@@ -38,8 +38,11 @@ left:9.5%;
 h2{
   color: #C81600 ;
   text-align: center;
+     font-size: 55px;
 
 }
 body{
   background-color: #52be7f;
+
+font-family: 'Vollkorn', serif;
 }

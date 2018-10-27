@@ -10,6 +10,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="{% static "css/update.css" %}">
+		  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet"> 
 
 	</head>
 	<body>
@@ -39,7 +40,7 @@
 					{% endfor %}
 				</select><br>
 				Number of classes absent<br>
-				<input type="text" name="absent" placeholder="No. of Classes absent"><br>
+				<input type="text" name="absent" value="{{absent}}"placeholder="No. of Classes absent"><br>
 				Your attendance percentage<br>
 				<input type="text" name="{{att_perc}}" placeholder="Present Percentage" value="{{att_perc}}"><br><br>
 				
