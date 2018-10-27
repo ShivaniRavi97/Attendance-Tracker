@@ -1,6 +1,34 @@
+.topnav {
+  overflow: hidden;
+  background-color: #062815;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #C81600 ;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
 body{
     background-color: #52be7f;
-    
+
 }
 
 
@@ -30,7 +58,7 @@ input[type=submit] {
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     cursor: pointer;
 }
 
@@ -39,7 +67,10 @@ input[type=submit]:hover {
 }
 
 div {
-    border-radius: 5px;
+    
     background-color: #f2f2f2;
     padding: 20px;
+}
+.container{
+    border-radius: 25px;
 }

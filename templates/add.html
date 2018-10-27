@@ -12,11 +12,25 @@
     <link rel="stylesheet" type="text/css" href="{% static "css/add.css" %}">
   </head>
   <body>
+      <div class="topnav" id="myTopnav">
+
+ <a href="/signout/">Signout</a>
+  <a href="/task/">Tasks</a>
+ 
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+    
     <br><br>
     <div class="container">
       <h1>Subject List</h1><br>
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Subject</button>
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Subject</button><br><br>
+         <form action="/attend/">
+               <button type="submit">Back</button>
+              </form>
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -25,7 +39,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">ADD SUBJECT</h4>
+              <h4 class="modal-title"></h4>
             </div>
             <div class="modal-body">
               <form action="/add/" method="POST">
@@ -36,6 +50,7 @@
                 <input type="text" name="total" placeholder="Total No. of Classes"><br><br>
                 <button type="submit">Submit</button>
               </form>
+           
                         
             </div>
             
@@ -71,5 +86,15 @@
   
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script  src="{% static "js/add.js" %}"></script>
+      <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
   </body>
 </html>

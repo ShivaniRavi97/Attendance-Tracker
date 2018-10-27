@@ -7,7 +7,7 @@ body {
 }
 
 h1{
-   color: white;
+   color: #C81600 ;
    font-size: 80px;
 }
 h4{
@@ -17,3 +17,40 @@ h4{
 	color: white;
 	width:300px;
 }
+.topnav {
+  overflow: hidden;
+  background-color: #062815;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #C81600 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+button:hover {
+  color: #7795f8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+button{
+	display: inline;
+}
+

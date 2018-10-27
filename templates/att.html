@@ -13,12 +13,24 @@
 		<link rel="stylesheet" type="text/css" href="{% static "css/default.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "css/component.css"%}" />
 		<script src="{% static "js/modernizr.custom.js" %}"></script>
+		<link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet"> 
 	</head>
 	<body>
+				<div class="topnav" id="myTopnav">
+
+ <a href="/signout/">Signout</a>
+  <a href="/task/">Tasks</a>
+ 
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 		
+	
             
                    <br> <h1>ATTENDANCE TRACKER</h1>
-                   <h2>Manage your classes here!</h2>
+                <h2>Manage your classes here!</h2>
     
            
 			<ul class="grid cs-style-5">
@@ -28,6 +40,7 @@
 						<figcaption>
 							 <h3>Add Subject</h3>
 							<p>Add you subject and number of classes per subject.</p>
+							<form action="/add/">
 							<a href="/add/">ADD</a>
 
 						</figcaption>
@@ -60,5 +73,15 @@
 			</ul>
 		</div><!-- /container -->
 		<script src="{% static "js/toucheffects.js" %}"></script>
+		<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 	</body>
 </html>
