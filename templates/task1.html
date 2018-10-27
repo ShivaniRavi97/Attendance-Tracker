@@ -18,6 +18,15 @@
 		
 	</head>
 	<body>
+		<div class="topnav" id="myTopnav">
+ <a href="/signout/">Signout</a>
+  <a href="/task/" class="active">Tasks</a>
+ 
+
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 		<div class="container">
 			<header class="codrops-header">
 				<br><br><h1>TASKS<span>Manage your tasks</span></h1>
@@ -66,6 +75,7 @@ overall  cumulativeperformance  of  a  student  over  all semesters. </p>
 			</section>
 		</div><!-- /container -->
 		<script>
+
 			(function() {
 	
 				function init() {
@@ -92,6 +102,16 @@ overall  cumulativeperformance  of  a  student  over  all semesters. </p>
 				init();
 
 			})();
+
 		</script>
+		<script>
+		function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}</script>
 	</body>
 </html>
