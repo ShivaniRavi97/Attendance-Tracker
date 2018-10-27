@@ -27,13 +27,15 @@
           <form action="/signup/" method="post">
           {% csrf_token %}
           <div class="top-row">
-            <!-- <div class="field-wrap"> -->
-              <!-- <label >
-                UserName<span class="req">*</span>
-              </label> --> 
-              <input class="field-wrap" type="text" required autocomplete="off"  name="username" placeholder="Username" required /> 
+      
            <!--  </div> -->
-        
+
+        <div class="field-wrap">
+              <label>
+                Username<span class="req">*</span>
+              </label>
+              <input type="text"required autocomplete="off"/>
+            </div>
             <div class="field-wrap">
               <label>
                 Phone Number<span class="req">*</span>
