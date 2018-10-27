@@ -1,4 +1,38 @@
-.one{
+.topnav {
+  overflow: hidden;
+  background-color: #062815;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #C81600 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}.one{
 	text-align: right;
 	color: red;
+}
+body{
+    font-family: 'Vollkorn', serif;
+      background-color: #52be7f;
+}
+.jumbotron{
+  background-color: #52be7f;
 }

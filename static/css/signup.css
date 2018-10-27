@@ -7,6 +7,9 @@
 body {
     background-image: url("../images/class.jpg");
     background-size: cover;
+    
+     font-family: 'Vollkorn', serif;
+
 }
 
 a {
@@ -16,6 +19,7 @@ a {
 }
 a:hover {
   color: #179b77;
+
 }
 
 .form {
