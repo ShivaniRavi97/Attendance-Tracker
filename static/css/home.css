@@ -25,14 +25,41 @@
 
 .topnav .icon {
   display: none;
-}.one{
+}
+.one{
 	text-align: right;
 	color: red;
 }
 body{
     font-family: 'Vollkorn', serif;
       background-color: #52be7f;
+       color: #d63031;
 }
 .jumbotron{
   background-color: #52be7f;
+}
+h3{
+   color: #d63031;
+   text-align:center;
+   padding-top:20px;
+   font-size: 25px;
+}
+img{
+  height: 150px;
+  width:150px;
+  margin-left: 600px;
+}
+h1{
+
+   color: #d63031;
+   text-align:center;
+   padding-top:20px;
+   font-size: 50px;
+}
+p{
+   color: #d63031;
+   text-align:center;
+   padding-top:20px;
+   font-size: 20px;
+   padding-left: 200px;
 }
