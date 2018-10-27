@@ -1,16 +1,94 @@
+.topnav {
+  overflow: hidden;
+  background-color: #062815;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #C81600 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
+
+
+
+
+
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  
+}
+
+li {
+    float: right;
+    display: inline;
+}
+
+li a {
+    font-size: 16px;
+    color: white;
+    text-align: right;
+    padding: 8px 8px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: transparent;
+}
+*/
+
 
 body{
-    /* The image used */
-   /* background-image:M1.jpg;
-
-     Full height 
-    height: 100%;*/
-  
 
 
-    /* Center and scale the image nicely */
     background-color:#3ECF8E;
-    font-family: 'Arbutus Slab', serif;
+    
+font-family: 'Vollkorn', serif;
+
      
 }
 
@@ -22,14 +100,15 @@ h1{
 p{
 	text-align: center;
 }
+.col-md-8{
 
+}
 .container{
-	padding-top: 100px;
-	padding-left: 50px;
-  padding-right: 50px;
-  margin:0 150px 10px 100px;
+	margin:50px 150px 10px 150px;
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
+
+
 
 
 }
@@ -42,8 +121,10 @@ button:hover {
 .hello{
 
   padding-top: 10px;
-  padding-left: 10px;
-
-
+  padding-left: 0px;
 
 }
+.card {
+ width:1050px;
+}
+

@@ -1,3 +1,57 @@
+.topnav {
+  overflow: hidden;
+  background-color: #062815;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #C81600 ;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+}
+
+
+
+
 
 body{
     /* The image used */
@@ -5,13 +59,13 @@ body{
 
      Full height 
     height: 100%;*/
-    background-color: #3ECF8E;
+   /* background-color: #3ECF8E;*/
 
     /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Arbutus Slab', serif;
+   
+font-family: 'Vollkorn', serif;
+
+      background-color:#3ECF8E;
     
 
 }
@@ -27,8 +81,8 @@ p{
 }
 
 .container{
-	padding-top: 100px;
-	padding-left: 100px;
+	padding-top: 50px;
+	padding-left: 50px;
   size: 50px 50px;
   text-align: center;
 
